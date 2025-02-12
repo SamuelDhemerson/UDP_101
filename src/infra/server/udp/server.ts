@@ -98,4 +98,12 @@ export class UDPServer {
     }
     this._socket.close();
   }
+
+  getClients(): Client[] {
+    const clients = [];
+    for (const [key, value] of this._clients) {
+      clients.push(value);
+    }
+    return clients;
+  }
 }
